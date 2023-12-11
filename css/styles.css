@@ -8,11 +8,10 @@ File Name: styles.css
 fonts: font-family: 'Francois One', sans-serif;
 font-family: 'Roboto Slab', serif;
 */
-
  @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;500;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption {
    margin: 0;
    padding: 0;
    border: 0;
@@ -28,12 +27,15 @@ img {
 	display: block;
 }
 
+/* Style rule for box sizing applies to all elements */
+* {
+	box-sizing: border-box;
+}
+
 /*Style Rules for mobile viewport*/
 
 /* Style rule for header */
 header{
-    position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	background-color: #000;
 	height: 190px;
@@ -115,6 +117,25 @@ main {
 	font-weight: bold;
 }
 
+.frame {
+	position: relative;
+	max-width: 450px;
+	margin: 2% auto;
+}
+
+.pic-text {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 #weights, #cardio, #training {
     margin: 0 2%;	
 }
@@ -145,7 +166,6 @@ main {
 
  /* Tablet Viewport: Style rule for header */
    header {
-	 position: static;
 	 padding-bottom: 2%;
    }
 
@@ -167,6 +187,17 @@ main {
 	/* Tablet viewport: Style rules for main content area */
 	main ul {
 		margin: 0 0 4% 10%;
+	}
+	
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 20px;
+	}
+	
+	.pic-text {
+		font-szie: 1em;
+		padding: 10px;
 	}
 	
 	#exercises {
