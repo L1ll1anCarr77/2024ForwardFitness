@@ -11,7 +11,7 @@ font-family: 'Roboto Slab', serif;
  @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;500;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, figure, figcaption {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
    margin: 0;
    padding: 0;
    border: 0;
@@ -91,6 +91,31 @@ main {
 	font-family: 'roboto slab', serif;
 }
 
+.mobile h3 {
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+article {
+	padding: 2%;
+}
+
+article h3 {
+	text-align: center;
+}
+
+article img {
+	margin: 0 auto;
+}
+
+article ul {
+	margin-left: 10%;
+}
+
+article:nth-of-type(2) {
+	background-color: rgba(204, 204, 204, 0.3);
+	border-radius: 15px;
+}
+
 .tel-link {
 	background-color: #404040;
 	padding: 2%;
@@ -115,6 +140,7 @@ main {
 	font-size: 1.35em;
 	color: #6606;
 	font-weight: bold;
+	text-shadow: 5px 5px 8px #ccc;
 }
 
 .frame {
@@ -196,7 +222,7 @@ main {
 	}
 	
 	.pic-text {
-		font-szie: 1em;
+		font-size: 1em;
 		padding: 10px;
 	}
 	
@@ -237,8 +263,6 @@ main {
 	
 	/* Desktop viewport: Style rule for header */
 	header {
-		width: 25%;
-		float: left;
 		padding-bottom: 0;
 	}
 	
@@ -273,6 +297,40 @@ main {
 	
 	main h1 {
 		font-size: 2em;
+	}
+	
+	article h3 {
+		font-size: 1.75em;
+	}
+	
+	.pic-text {
+		font-size: 1.5em;
+		padding: 20px;
+	}
+	
+	aside {
+		text-align: center;
+		font-side:1.25em;
+		font-style: italic;
+		font-weight: bold;
+		padding: 2%;
+		background-color: rgba(204, 204, 204, 0.6);
+		box-shadow: 5px 5px 8px #000;
+		text-shadow: 5px 5px 5px #b3b3b3;
+		border-radius: 0 15px;
+	}
+	
+	.grid-item4 {
+		grid-column: 1 / span 3;
+	}
+	
+	.frame {
+		opacity: 0.9;
+	}
+	
+	.frame:hover {
+		opacity: 1;
+		box-shadow: 8px 8px 10px #808080;
 	}
 	
 	#weights, #cardio, #training {
