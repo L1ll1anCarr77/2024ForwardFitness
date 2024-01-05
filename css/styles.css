@@ -11,7 +11,7 @@ font-family: 'Roboto Slab', serif;
  @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;500;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, table {
    margin: 0;
    padding: 0;
    border: 0;
@@ -176,6 +176,41 @@ article:nth-of-type(2) {
 	height: 50%;
 }
 
+#form {
+	margin-top: 2%;
+	background:linear-gradient(to left, #333, #888, #f2f2f2);
+	padding: 2%;
+}
+
+#form h2 {
+	text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	padding-top: 3%;
+}
+
+form #submit {
+	margin: 0 auto;
+	border: none;
+	display: block;
+	padding: 2%;
+	background-color: #b3b3b3;
+	font-size: 1em;
+	border-radius: 10px;
+}
+
 /* Media Query for tablet Viewport */
 @media screen and (min-width: 630px), print {
 	
@@ -256,6 +291,41 @@ article:nth-of-type(2) {
 		height: 450px;
 	}
 	
+/* Tablet Viewport: Style rules for table */
+	table {
+       border: 1px solid #000;
+	   border-collapse: collapse;
+	   margin: 0 auto;
+	   width: 100%;
+    }
+	
+	caption {
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 1%;
+	}
+	
+	th, td {
+		border: 1px solid #000;
+		padding: 2%;
+	}
+	
+	th {
+	  background-color: #000;
+	  color: #fff;
+	  font-size: 1.15em;
+	}
+	
+	tr:nth-child(odd) {
+	    background-color: #ccc;
+	}
+	
+/* Tablet Viewport: Style rule for form element */
+	form {
+		width: 70%;
+		margin: 0 auto;
+	}
+	
 }/* END Media Query for tablet Viewport */
 
 /* Media Query for tablet Viewport */
@@ -310,7 +380,7 @@ article:nth-of-type(2) {
 	
 	aside {
 		text-align: center;
-		font-side:1.25em;
+		font-size:1.25em;
 		font-style: italic;
 		font-weight: bold;
 		padding: 2%;
@@ -343,7 +413,22 @@ article:nth-of-type(2) {
 		clear: left;
 	}
 	
-} /* Closing desktop viewport mdeia Query */
+/* Desktop Viewport: Style rules for form elements */
+	form {
+		width: auto;
+	}
+	
+	.form-grid {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 20px;
+	}
+	
+	.btn {
+		grid-column: 1 / span 3;
+	}
+	
+} /* Closing desktop viewport media Query */
 
 /* Large screen Media Qeury */
 @media screen and (min-width: 1921px) {
@@ -351,6 +436,10 @@ article:nth-of-type(2) {
 	#container {
 		width: 1920px;
 		margin: 0 auto;
+	}
+	
+	table {
+		width: 80%;
 	}
 		
 }/* End large screen media query */
@@ -382,7 +471,6 @@ article:nth-of-type(2) {
 	width: 95%;
 	height: 50%;
 }
-
 
 /* Style rules for the footer content */
 footer p {
